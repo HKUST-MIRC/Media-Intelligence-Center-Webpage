@@ -22,13 +22,25 @@ const {
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
   <div id="brands-container" class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8">
-    {icons && icons.map((icon, index) => <Icon name={icon} class="w-8 h-8 text-gray-500 flex-shrink-0 brand-item opacity-0 translate-y-4" style={`animation-delay: ${index * 0.1}s`} />)}
+    {
+      icons &&
+        icons.map((icon, index) => (
+          <Icon
+            name={icon}
+            class="w-8 h-8 text-gray-500 flex-shrink-0 brand-item opacity-0 translate-y-4"
+            style={`animation-delay: ${index * 0.1}s`}
+          />
+        ))
+    }
     {
       images &&
         images.map(
           (image, index) =>
             image.src && (
-              <div class="flex justify-center items-center p-2 rounded-md dark:bg-gray-200 bg-white shadow-sm h-16 w-24 flex-shrink-0 brand-item opacity-0 translate-y-4 transition-all duration-500 ease-out hover:scale-105 hover:shadow-md" style={`animation-delay: ${(icons.length + index) * 0.1}s`}>
+              <div
+                class="flex justify-center items-center p-2 rounded-md dark:bg-gray-200 bg-white shadow-sm h-16 w-24 flex-shrink-0 brand-item opacity-0 translate-y-4 transition-all duration-500 ease-out hover:scale-105 hover:shadow-md"
+                style={`animation-delay: ${(icons.length + index) * 0.1}s`}
+              >
                 <Image src={image.src} alt={image.alt || ''} class="max-h-10 max-w-20 w-auto h-auto object-contain" />
               </div>
             )
@@ -39,18 +51,22 @@ const {
 
 <style>
   .brand-item {
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
   }
-  
+
   .brand-item.animate {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   .brands-fast-animate .brand-item {
-    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    transition:
+      opacity 0.2s ease-out,
+      transform 0.2s ease-out;
   }
-  
+
   @keyframes slideInUp {
     from {
       opacity: 0;
@@ -64,45 +80,51 @@ const {
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const brandsContainer = document.getElementById('brands-container');
     const brandItems = document.querySelectorAll('.brand-item');
-    
+
     if (!brandsContainer || !brandItems.length) return;
-    
+
     let hasAnimated = false;
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !hasAnimated) {
-          // Animate items in when entering viewport
-          brandItems.forEach((item, index) => {
-            setTimeout(() => {
-              item.classList.add('animate');
-            }, index * 100);
-          });
-          hasAnimated = true;
-        } else if (!entry.isIntersecting && hasAnimated) {
-          // Fast re-animation when leaving viewport
-          brandsContainer.classList.add('brands-fast-animate');
-          brandItems.forEach((item, index) => {
-            item.classList.remove('animate');
-            setTimeout(() => {
-              item.classList.add('animate');
-            }, index * 20); // Much faster stagger (20ms instead of 100ms)
-          });
-          
-          // Remove fast animation class after animation completes
-          setTimeout(() => {
-            brandsContainer.classList.remove('brands-fast-animate');
-          }, brandItems.length * 20 + 200);
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '-50px 0px'
-    });
-    
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            // Animate items in when entering viewport
+            brandItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('animate');
+              }, index * 100);
+            });
+            hasAnimated = true;
+          } else if (!entry.isIntersecting && hasAnimated) {
+            // Fast re-animation when leaving viewport
+            brandsContainer.classList.add('brands-fast-animate');
+            brandItems.forEach((item, index) => {
+              item.classList.remove('animate');
+              setTimeout(() => {
+                item.classList.add('animate');
+              }, index * 20); // Much faster stagger (20ms instead of 100ms)
+            });
+
+            // Remove fast animation class after animation completes
+            setTimeout(
+              () => {
+                brandsContainer.classList.remove('brands-fast-animate');
+              },
+              brandItems.length * 20 + 200
+            );
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '-50px 0px',
+      }
+    );
+
     observer.observe(brandsContainer);
   });
 </script>
