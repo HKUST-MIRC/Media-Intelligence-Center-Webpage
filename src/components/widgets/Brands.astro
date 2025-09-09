@@ -21,15 +21,15 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
-  <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24">
-    {icons && icons.map((icon) => <Icon name={icon} class="py-3 lg:py-5 w-12 h-auto mx-auto sm:mx-0 text-gray-500" />)}
+  <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8">
+    {icons && icons.map((icon) => <Icon name={icon} class="w-8 h-8 text-gray-500 flex-shrink-0" />)}
     {
       images &&
         images.map(
           (image) =>
             image.src && (
-              <div class="flex justify-center items-center my-2 lg:my-4 py-2 px-4 rounded-md dark:bg-gray-200 h-12 min-w-[40px]">
-                <Image src={image.src} alt={image.alt || ''} class="h-6 w-auto object-contain" />
+              <div class="flex justify-center items-center p-2 rounded-md dark:bg-gray-200 bg-white shadow-sm h-16 w-24 flex-shrink-0">
+                <Image src={image.src} alt={image.alt || ''} class="max-h-10 max-w-20 w-auto h-auto object-contain" />
               </div>
             )
         )
