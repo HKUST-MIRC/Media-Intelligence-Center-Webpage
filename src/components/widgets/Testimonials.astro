@@ -22,13 +22,12 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
-  {testimonials && testimonials.length > 0 && (
-    <>
-      <!-- Directors Section -->
-      <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 mb-8 justify-center">
-        {testimonials
-          .slice(0, 2)
-          .map(({ title, testimonial, name, job, image, url }) => (
+  {
+    testimonials && testimonials.length > 0 && (
+      <>
+        {/* Directors Section */}
+        <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 mb-8 justify-center">
+          {testimonials.slice(0, 2).map(({ title, testimonial, name, job, image, url }) => (
             <div class="flex h-auto intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter justify-center">
               <div class="flex flex-col items-center p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600 text-center max-w-sm">
                 {image && (
@@ -49,9 +48,9 @@ const {
                 )}
 
                 {name && url && (
-                  <a 
-                    href={url} 
-                    target="_blank" 
+                  <a
+                    href={url}
+                    target="_blank"
                     rel="noopener noreferrer"
                     class="text-lg font-semibold mb-1 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 hover:underline transition-colors duration-200"
                   >
@@ -70,14 +69,12 @@ const {
               </div>
             </div>
           ))}
-      </div>
+        </div>
 
-      <!-- Other Faculty Section -->
-      {testimonials.length > 2 && (
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials
-            .slice(2)
-            .map(({ title, testimonial, name, job, image, url }) => (
+        {/* <!-- Other Faculty Section --> */}
+        {testimonials.length > 2 && (
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.slice(2).map(({ title, testimonial, name, job, image, url }) => (
               <div class="flex h-auto intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
                 <div class="flex flex-col items-center p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600 text-center">
                   {image && (
@@ -98,9 +95,9 @@ const {
                   )}
 
                   {name && url && (
-                    <a 
-                      href={url} 
-                      target="_blank" 
+                    <a
+                      href={url}
+                      target="_blank"
                       rel="noopener noreferrer"
                       class="text-lg font-semibold mb-1 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 hover:underline transition-colors duration-200"
                     >
@@ -119,10 +116,11 @@ const {
                 </div>
               </div>
             ))}
-        </div>
-      )}
-    </>
-  )}
+          </div>
+        )}
+      </>
+    )
+  }
   {
     callToAction && (
       <div class="flex justify-center mx-auto w-fit mt-8 md:mt-12 font-medium">
