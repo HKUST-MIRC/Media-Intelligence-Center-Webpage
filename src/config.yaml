@@ -17,9 +17,9 @@ metadata:
     index: true
     follow: true
   openGraph:
-    site_name: 'Example'
+    site_name: 'HKUST-MIRC'
     images:
-      - url: '~/assets/images/default.png'
+      - url: ''
         width: 1200
         height: 628
     type: website

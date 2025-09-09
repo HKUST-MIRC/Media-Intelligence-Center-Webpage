@@ -7,6 +7,8 @@
     - `src/components/logo.astro` is the logo component used in the header.
   - `src/pages/` directory contains the individual pages of the website. Each .astro file corresponds to a route on the site. Markdown files (.md) can also be used for content pages.
     - `src/pages/index.astro` is the homepage of the site.
+- `ToggleMenu` is mannually removed to disable the mobile menu toggle button. It can be re-enabled by uncommenting the relevant lines in `src/components/widgets/Header.astro`.
+- `showRssFeed` is mannually removed to disable the RSS feed icon in the header. It can be re-enabled by uncommenting the relevant lines in `src/layouts/PageLayout.astro`.
 
 # Note for deployment
 
