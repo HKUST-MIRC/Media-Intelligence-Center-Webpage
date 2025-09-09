@@ -169,6 +169,7 @@ export const footerData = {
   secondaryLinks: [
     // { text: 'Terms', href: getPermalink('/terms') },
     // { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    {text: 'Contact Us', href: 'mailto:mirc@ust.hk'}
   ],
   socialLinks: [
     // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },

@@ -1,8 +1,8 @@
 site:
   name: 'HKUST-MIRC'
-  site: 'https://hkust-mirc.github.io/Media-Intelligence-Research-Center-Webpage/'
-  # base: '/' # Change this if you need to deploy to Github Pages, for example
-  base: '/Media-Intelligence-Research-Center-Webpage/'
+  site: 'https://hkust-mirc.github.io'
+  base: '/' # Change this if you need to deploy to Github Pages, for example
+  # base: '/Media-Intelligence-Research-Center-Webpage/'
   trailingSlash: false # Generate permalinks with or without "/" at the end
 
   googleSiteVerificationId: 'false' # Or some value,
