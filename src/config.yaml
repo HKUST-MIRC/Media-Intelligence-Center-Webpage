@@ -1,6 +1,6 @@
 site:
   name: 'MIC'
-  site: 'https://example.com'
+  site: 'https://HKUST-MIRC.github.io'
   base: '/' # Change this if you need to deploy to Github Pages, for example
   trailingSlash: false # Generate permalinks with or without "/" at the end
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 'Example'
-    template: '%s — Example'
-  description: 'This is the default meta description of Example website'
+    default: 'HKUST-MIRC'
+    template: '%s — HKUST-MIRC'
+  description: 'HKUST Media Intelligence Research Center'
   robots:
     index: true
     follow: true
