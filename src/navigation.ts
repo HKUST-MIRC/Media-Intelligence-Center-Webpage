@@ -86,35 +86,35 @@ export const headerData = {
     //     },
     //   ],
     // },
-    {
-      text: 'Blog',
-      //   links: [
-      //     {
-      //       text: 'Blog List',
-      //       href: getBlogPermalink(),
-      //     },
-      //     {
-      //       text: 'Article',
-      //       href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-      //     },
-      //     {
-      //       text: 'Article (with MDX)',
-      //       href: getPermalink('markdown-elements-demo-post', 'post'),
-      //     },
-      //     {
-      //       text: 'Category Page',
-      //       href: getPermalink('tutorials', 'category'),
-      //     },
-      //     {
-      //       text: 'Tag Page',
-      //       href: getPermalink('astro', 'tag'),
-      //     },
-      //   ],
-    },
-    {
-      text: 'About Us',
-      href: '#',
-    },
+    // {
+    //   text: 'Blog',
+    //   links: [
+    //     {
+    //       text: 'Blog List',
+    //       href: getBlogPermalink(),
+    //     },
+    //     {
+    //       text: 'Article',
+    //       href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+    //     },
+    //     {
+    //       text: 'Article (with MDX)',
+    //       href: getPermalink('markdown-elements-demo-post', 'post'),
+    //     },
+    //     {
+    //       text: 'Category Page',
+    //       href: getPermalink('tutorials', 'category'),
+    //     },
+    //     {
+    //       text: 'Tag Page',
+    //       href: getPermalink('astro', 'tag'),
+    //     },
+    //   ],
+    // },
+    // {
+    //   text: 'About Us',
+    //   href: '#',
+    // },
   ],
   //   actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
 };
@@ -178,6 +178,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/MRTater"> Luo Yiyang</a> from Media Intelligence Center · All rights reserved.
+    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/MRTater"> Luo Yiyang</a> from Media Intelligence Research Center · All rights reserved.
   `,
 };

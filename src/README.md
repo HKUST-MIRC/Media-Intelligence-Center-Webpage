@@ -11,3 +11,5 @@
 # Note for deployment
 
 - Modify `.github/workflows/deploy.yml` for automated deployment settings.
+  - Remember to set the `base` in `config.yaml` to `/` when doing local testing.
+  - Set the `base` in `config.yaml` to `/Media-Intelligence-Center-Webpage/` when deploying to GitHub Pages.

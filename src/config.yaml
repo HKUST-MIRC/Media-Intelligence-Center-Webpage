@@ -1,5 +1,5 @@
 site:
-  name: 'MIC'
+  name: 'HKUST-MIRC'
   site: 'https://HKUST-MIRC.github.io'
   # base: '/' # Change this if you need to deploy to Github Pages, for example
   base: '/Media-Intelligence-Center-Webpage/'
